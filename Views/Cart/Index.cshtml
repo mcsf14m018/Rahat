@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using RahatBakery.com.Models;
+
+<h2>Cart</h2>
+@{int total = 0;}
+<div class="table-responsive">
+    
+    <table>
+        <tr>
+            <th style="border:solid"><h3>Name</h3></th>
+            <th style="border:solid"><h3>Price</h3></th>
+        </tr>
+        @foreach (Item i in Model)
+        {
+            <tr>
+                <td style="border:solid">@i.Name</td>
+                <td style="border:solid">@i.Price</td>
+                @{total += i.Price;}
+                <td style="border:solid"><a href="~/Cart/RemoveToCart?id=@i.Id">Remove</a></td>
+            </tr>
+        }
+        <tr>
+            <td style="border:solid"><h3>Total</h3> </td>
+            <td style="border:solid"><h3>@total</h3></td>
+        </tr>
+        <tr style="text-align:center">
+            
+        </tr>
+    </table>
+    
+</div>

@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using RahatBakery.com.Models;
+<h2 style="color:red">Edit Customer Data</h2>
+
+<div class="row">
+    <div class="col-lg-9">
+        <div class="container-fluid">
+            <form method="post" action="Save">
+                <br /><br /><br />
+                <br /><br /><br />
+                <h1 style="color:red">Update Customer Data</h1>
+                <input type="hidden" name="Id" value="@Model.Id" />
+                <table class="table" style="border:hidden">
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><label class="badge">First Name</label></td>
+                        <td><input type="text" value="@Model.FirstName" name="FirstName" id="FirstName" /></td>
+                    </tr>
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><label class="badge">Last Name</label></td>
+                        <td><input type="text" value="@Model.LastName" name="LastName" id="LastName" /></td>
+                    </tr>
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><label class="badge">Phone</label></td>
+                        <td><input type="text" value="@Model.Phone" name="Phone" id="Phone" /> <span style="color:skyblue">Format: 03001234567</span> </td>
+                    </tr>
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><label class="badge">Address</label></td>
+                        <td><input type="text" value="@Model.Address" name="Address" id="Address" /></td>
+                    </tr>
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><label class="badge">City</label></td>
+                        <td><input type="text" value="@Model.City" name="City" id="City" /></td>
+                    </tr>
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><label class="badge">Country</label></td>
+                        <td><input type="text" value="@Model.Country" name="Country" id="Country" /></td>
+                    </tr>
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><label class="badge">Profession</label></td>
+                        <td><input type="text" value="@Model.Profession" name="Profession" id="Profession" /></td>
+                    </tr>
+                    <tr style="border:hidden">
+                        <td style="text-align:right"><input type="submit" style="color:cadetblue" /> </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>

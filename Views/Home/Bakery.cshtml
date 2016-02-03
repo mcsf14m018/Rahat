@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Bakery";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using RahatBakery.com.Models;
+
+<br/><br /><br />
+<h1 style="color:red">Bakery</h1>
+<div class="row">
+    <div class="col-lg-2">
+        <div class="list-group">
+            @foreach (Category c in Model)
+            {
+                <div class="list-group-item">
+                    <a href="~/Home/ShowItems?dept=1&categ=@c.CatId" class="list-group-item-warning">@c.Name</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>

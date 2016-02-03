@@ -1,0 +1,41 @@
+﻿@{
+    ViewBag.Title = "ViewAllCustomers";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+@using RahatBakery.com.Models;
+<h2 style="color:red">All Customers</h2>
+
+<body style="background-color:aliceblue">
+    <div class="row" >
+        <div class="col-lg-9">
+            <table class="table" border="0">
+                <tr style="border:solid">
+                    <th style="border:solid;color:red">First Name</th>
+                    <th style="border: solid; color: red">Last Name</th>
+                    <th style="border: solid; color: red">Phone</th>
+                    <th style="border: solid; color: red">Address</th>
+                    <th style="border: solid; color: red">City</th>
+                    <th style="border: solid; color: red">Country</th>
+                    <th style="border: solid; color: red">Profession</th>
+                    <th style="border: solid; color: red">Edit</th>
+                    <th style="border: solid; color: red">Delete</th>
+                </tr>
+                @foreach(Customer c in Model)
+                {
+                    <tr style="border:groove">
+                        <td style="border:groove">@c.FirstName</td>
+                        <td style="border:groove">@c.LastName</td>
+                        <td style="border:groove">@c.Phone</td>
+                        <td style="border:groove">@c.Address</td>
+                        <td style="border:groove">@c.City</td>
+                        <td style="border:groove">@c.Country</td>
+                        <td style="border:groove">@c.Profession</td>
+                        <td style="border:groove"><a href="Edit?id=@c.Id">Edit @c.Id</a></td>
+                        <td style="border:groove"><a href="Delete?id=@c.Id">Delete</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</body>

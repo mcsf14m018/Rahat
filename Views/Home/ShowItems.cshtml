@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "ShowItems";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using RahatBakery.com.Models;
+
+<script>
+    function added()
+    {
+        alert("Added to Cart");
+    }
+</script>
+
+<h2 style="color:red">Items</h2>
+<div class="row">
+    <div class="col-lg-2">
+        <div class="list-group">
+            @foreach (Category c in ViewBag.catlist)
+            {
+                <div class="list-group-item">
+                    <a href="~/Home/ShowItems?dept=@c.Dept&categ=@c.CatId" class="list-group-item-warning">@c.Name</a>
+                </div>
+            }
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="row">
+            @*<table class="table table-striped" >
+                <tr>
+                    <th style="border:solid"><h3>Name</h3></th>
+                    <th style="border:solid"><h3>Price</h3></th>
+                </tr>
+                @foreach (Item i in Model)
+                {
+                    <tr>
+                        <td style="border:solid">@i.Name</td>
+                        <td style="border:solid">@i.Price</td>
+                        <td style="border:solid"><a href="~/Cart/AddToCart?id=@i.Id&dept=@i.Dept&categ=@i.Category" onclick="added()">Add To Cart</a></td>
+                    </tr>
+                }
+            </table>*@
+            @foreach (Item i in Model)
+            {
+                <div class="col-md-3"style="height:100px;">
+                    <div style="background-color:orange; height:60px;">
+                        <strong> Name:</strong> @i.Name
+                    </div>
+                    <div style="background-color:blue; height:30px;">
+                        <strong>Item Price:</strong>  @i.Price
+
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

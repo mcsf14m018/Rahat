@@ -1,0 +1,74 @@
+﻿@{
+    ViewBag.Title = "Subscribe";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.js"></script>
+    
+<body style="background-color:aliceblue">
+    <div class="jumbotron" style="background-color:yellow; color:red; font-family:'times new roman'">
+        <div class="container text-center">
+            <h1><img src="~/Content/logo.png" height="100" width="200" /> Bakers & Departmental Store</h1>
+        </div>
+
+        <div class="text-info" style="text-align:center">Serving The Nation Since 1950.</div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6" style="background-color:aliceblue">
+            <div class="container-fluid">
+                <div class="form-group" style="text-align:justify">
+                    <form method="post" action="AddCustomer">
+                        <h1 style="color:red;font:bold">Subscribe for New Offers & Updates</h1>
+                        <p style="font-family:'Times New Roman';color:red;font-size:x-large">
+                            Fill the form given below to get updated to our monthly and occasionally offers. We release
+                            a monthly phamplet containing hot and seasonal offers. The subscription will give you the benefit to
+                            get updated with these offers through mobile messages and as well as E-Mails.<h2 style="font-family:'Times New Roman';color:red">Keep Update to Our Offers and Avail Benefits.</h2>
+                        </p>
+                        <table class="table" style="border:hidden">
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><label class="badge">First Name</label></td>
+                                <td><input type="text" placeholder="First Name" name="FirstName" id="FirstName" /><span style="color:skyblue"> John Doe</span></td>
+                            </tr>
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><label class="badge">Last Name</label></td>
+                                <td><input type="text" placeholder="Last Name" name="LastName" id="LastName" /><span style="color:skyblue"> John Doe</span></td>
+                            </tr>
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><label class="badge">Phone</label></td>
+                                <td><input type="text" placeholder="Phone" name="Phone" id="Phone" /> <span style="color:skyblue">Format: 03001234567</span> </td>
+                            </tr>
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><label class="badge">Address</label></td>
+                                <td><input type="text" placeholder="Address" name="Address" id="Address" /> <span style="color:skyblue"> House#, Street #, Town/Society</span> </td>
+                            </tr>
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><label class="badge">City</label></td>
+                                <td><input type="text" placeholder="City" name="City" id="City" /> <span style="color:skyblue"> District i.e Lahore</span> </td>
+                            </tr>
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><label class="badge">Country</label></td>
+                                <td><input type="text" placeholder="Country" name="Country" id="Country" /><span style="color:skyblue"> i.e. Pakistan</span></td>
+                            </tr>
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><label class="badge">Profession</label></td>
+                                <td><input type="text" placeholder="Profession" name="Profession" id="Profession" /><span style="color:skyblue"> Engineer, Manager, Sole Properietr, CEO</span></td>
+                            </tr>
+                            <tr style="border:hidden">
+                                <td style="text-align:right"><input type="submit" class="btn-danger btn" value="Submit" /> </td>
+                                <td style="text-align:left"><input type="button" class="btn-danger btn" value="Cancel" /> </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="img-circle" style="text-align:center">
+                <img src="~/Content/artworkDecember.jpg" height="800" width="600" />
+            </div>
+        </div>
+    </div>
+        
+</body>

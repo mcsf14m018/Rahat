@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Register User</h2>
+<div class="form-group">
+    <form method="post" action="AddUser">
+        <h1 style="color:red">Register New User</h1>
+        <table class="table" style="border:hidden">
+            <tr style="border:hidden">
+                <td style="text-align:right"><label class="badge">User Name</label></td>
+                <td><input type="text" placeholder="User Name" name="UserName" id="UserName" /><span style="color:skyblue"> John Doe</span></td>
+            </tr>
+            <tr style="border:hidden">
+                <td style="text-align:right"><label class="badge">Password</label></td>
+                <td><input type="password" placeholder="Passowrd" name="Password" id="Password" /><span style="color:skyblue">*****</span></td>
+            </tr>
+            <tr style="border:hidden">
+                <td style="text-align:right"><label class="badge">Role</label></td>
+                <td><input type="text" placeholder="Role" name="Role" id="Role" /> <span style="color:skyblue">1/2</span> </td>
+            </tr>
+            <tr style="border:hidden">
+                <td style="text-align:right"><label class="badge">Phone</label></td>
+                <td><input type="text" placeholder="Phone" name="Phone" id="Phone" /> <span style="color:skyblue"> Format: 03001234567</span> </td>
+            </tr>
+            <tr style="border:hidden">
+                <td style="text-align:right"><label class="badge">Designation</label></td>
+                <td><input type="text" placeholder="Designation" name="Designation" id="Designation" /> <span style="color:skyblue"> Staff, Manager</span> </td>
+            </tr>
+            <tr style="border:hidden">
+                <td style="text-align:right"><input type="submit" class="btn-danger btn" value="Submit" /> </td>
+                <td style="text-align:left"><input type="button" class="btn-danger btn" value="Cancel" /> </td>
+            </tr>
+        </table>
+    </form>
+
+</div>

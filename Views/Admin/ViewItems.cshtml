@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "ViewItems";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using RahatBakery.com.Models;
+<h2 style="color:red">All Items</h2>
+
+<body style="background-color:aliceblue">
+    <div class="row">
+        <div class="col-lg-9">
+            <table class="table" border="0">
+                <tr style="border:solid">
+                    <th style="border:solid;color:red">Name</th>
+                    <th style="border: solid; color: red">Price</th>
+                    <th style="border: solid; color: red">Department</th>
+                    <th style="border: solid; color: red">Category</th>
+                </tr>
+                @foreach (Item c in Model)
+                {
+                    <tr style="border:groove">
+                        <td style="border:groove">@c.Name</td>
+                        <td style="border:groove">@c.Price</td>
+                        <td style="border:groove">@c.Dept</td>
+                        <td style="border:groove">@c.Category</td>
+                        <td style="border:groove"><a href="Edit?id=@c.Id">Edit @c.Id</a></td>
+                        <td style="border:groove"><a href="Delete?id=@c.Id">Delete</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</body>

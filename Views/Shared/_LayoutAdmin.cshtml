@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Rahat Bakers & Departmental Store";
+}
+<link href="~/Content/Site.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<script src="~/Scripts/bootstrap.js"></script>
+<!DOCTYPE html>
+
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/logo.png" rel="shortcut icon" type="image/png" />
+<link href=" bootstrap.css" rel="stylesheet">
+<script src="bootstrap.js"></script>
+<title>@ViewBag.Title</title>
+
+<div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <a class="nav navbar-nav" href="Admin"><div><img src="~/Content/logo.png" height="53" width="125" /></div></a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="nav navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Logout", "Index", "Admin")</li>
+                <li>@Html.ActionLink("View Customer Data", "ViewAllCustomers", "Admin")</li>
+                <li>@Html.ActionLink("View Users", "ViewUsers", "Admin")</li>
+                <li>@Html.ActionLink("Register User", "Register", "Admin")</li>
+                <li>@Html.ActionLink("Register Item", "RegItem", "Admin")</li>
+                <li>@Html.ActionLink("Items", "ViewItems", "Admin")</li>
+                <li>@Html.ActionLink("Images Data", "Images", "Admin")</li>
+                <li>@Html.ActionLink("Web Home", "Index", "Home")</li>
+            </ul>
+            <form class="navbar-form navbar-left pull-right" role="search">
+                <div class="form.group">
+                    <input type="text" class="form.control" placeholder="Search Here. . ." height="20" width=" 10" />
+                    <button type="submit" class="btn btn-danger">Search</button>
+                </div>
+
+            </form>
+        </div>
+    </nav>
+</div>
+
+<div id="#body">
+    <section class="content-wrapper main-content clear-fix">
+        @RenderBody()
+    </section>
+</div>
+<footer class="navbar-static-bottom">
+    <div class="nav navbar content-wrapper">
+        <div class="bottom-left">
+            <a href="facebook.com/rahatbakersdepartmentalstore"><h3>Like Us</h3></a><br />
+            <p>&copy; @DateTime.Now.Year - Prepared By: Zeeshan Arshad +92-(0)334-970-3013 <a href="zeeshan-arshad1@hotmail.com">zeeshan-arshad1@hotmail.com</a></p>
+        </div>
+    </div>
+</footer>
+

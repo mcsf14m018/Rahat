@@ -1,0 +1,52 @@
+﻿@{
+    ViewBag.Title = "Store";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using RahatBakery.com.Models;
+<script src="~/Scripts/jquery-1.12.0.min.js"></script>
+<script src="~/Scripts/jquery-1.11.3.js"></script>
+<script type="text/javascript">
+    $(document).ready()
+    function showitems() {
+        var x = $("#inid").val();
+        $.getJSON("~/Home/ShowItems?dept=2&categ=" + x, function (data) {
+            debugger;
+            for (var i = 0; i < data.length; i++) {
+                debugger;
+                $("#itemtable").append("<tr><td>" + data.Name + "</td><td>" + data.Price + "</td></tr>");
+            }
+</script>
+
+<br/><br /><br />
+<h1 style="color:red">Department Store</h1>
+<div class="row">
+    <div class="col-lg-2">
+        <button id="id1">x</button>
+        <div class="list-group">
+            @foreach(Category c in Model)
+            {
+                <div class="list-group-item">
+                    <input type="hidden" value="@c.CatId"  id="inid"/>
+                    <button class="list-group-item-warning" id="idcat+@c.CatId" onclick="showitems()">@c.Name</button>
+                </div>
+            }
+        </div>
+    </div>
+    <div id="items" class="col-lg-8">
+        <table >
+            <thead>
+                <tr>
+                    <th style="border:solid"><h3>Name</h3></th>
+                    <th style="border:solid"><h3>Price</h3></th>
+                </tr>
+            </thead>
+            <tbody id="itemtable">
+
+            </tbody>
+
+        </table>
+
+</div>
+</div>
+

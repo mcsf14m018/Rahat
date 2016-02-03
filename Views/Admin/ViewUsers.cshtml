@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "ViewUsers";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using RahatBakery.com.Models;
+<h2 style="color:red">All Users</h2>
+
+<body style="background-color:aliceblue">
+    <div class="row">
+        <div class="col-lg-9">
+            <table class="table" border="0">
+                <tr style="border:solid">
+                    <th style="border:solid;color:red">User Name</th>
+                    <th style="border: solid; color: red">Password</th>
+                    <th style="border: solid; color: red">Role</th>
+                    <th style="border: solid; color: red">Phone</th>
+                    <th style="border: solid; color: red">Designation</th>
+                </tr>
+                @foreach (User c in Model)
+                {
+                    <tr style="border:groove">
+                        <td style="border:groove">@c.UserName</td>
+                        <td style="border:groove">@c.Password</td>
+                        <td style="border:groove">@c.Role</td>
+                        <td style="border:groove">@c.Phone</td>
+                        <td style="border:groove">@c.Designation</td>
+                        <td style="border:groove"><a href="Edit?id=@c.Id">Edit @c.Id</a></td>
+                        <td style="border:groove"><a href="Delete?id=@c.Id">Delete</a></td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+
+</body>
